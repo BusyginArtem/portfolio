@@ -1,16 +1,23 @@
 "use client";
 
-import Image from "next/image";
+import { useSectionInView } from "@/lib/hooks";
 import profileImg from "@/public/profile-img.avif";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { HiDownload } from "react-icons/hi";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section
+      ref={ref}
+      id="home"
+      className="mb-20 max-w-[50rem] scroll-mt-36 text-center sm:mb-0"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -70,7 +77,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="flex items-center gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
+          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-0.5" />
@@ -79,17 +86,25 @@ export default function Intro() {
         <a
           href="/CV.pdf"
           download
-          className="flex items-center gap-2 py-3 transition bg-white border rounded-full outline-none cursor-pointer group border-black/10 px-7 hover:scale-110 focus:scale-110 active:scale-105"
+          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
         >
           Download CV{" "}
           <HiDownload className="opacity-60 transition group-hover:translate-x-0.5" />
         </a>
 
-        <a href="https://www.linkedin.com/in/artem-busyhin-developer" target="_blank" className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]">
+        <a
+          href="https://www.linkedin.com/in/artem-busyhin-developer"
+          target="_blank"
+          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]"
+        >
           <BsLinkedin />
         </a>
 
-        <a href="https://github.com/BusyginArtem" target="_blank" className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]">
+        <a
+          href="https://github.com/BusyginArtem?tab=repositories"
+          target="_blank"
+          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]"
+        >
           <FaGithubSquare />
         </a>
       </motion.div>
