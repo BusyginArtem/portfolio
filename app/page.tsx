@@ -1,12 +1,13 @@
 import SectionDivider from "@/components/section-divider";
 import About from "@/sections/about";
+import Experience from "@/sections/experience";
 import Intro from "@/sections/intro";
 import Projects from "@/sections/projects";
 import Skills from "@/sections/skills";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className="mb-28 flex flex-col items-center px-4">
       <Intro />
       <SectionDivider />
       <About />
@@ -14,6 +15,8 @@ export default function Home() {
       <Projects />
       <SectionDivider />
       <Skills />
+      <SectionDivider />
+      <Experience />
     </main>
   );
 }

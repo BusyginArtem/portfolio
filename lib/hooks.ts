@@ -20,5 +20,6 @@ export function useSectionInView(
 
   return {
     ref,
+    inView,
   };
 }

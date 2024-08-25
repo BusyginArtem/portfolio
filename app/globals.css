@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#experience .vertical-timeline-element-date-custom {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+#experience .vertical-timeline-element-icon-custom {
+  background: #fff;
+}
+
+#experience .vertical-timeline-element-icon-custom > svg {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+}
