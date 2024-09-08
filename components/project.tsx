@@ -1,9 +1,12 @@
 "use client";
 
-import type { ProjectProps } from "@/lib/types";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
+
+import Image from "next/image";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+
+import type { ProjectProps } from "@/lib/types";
 
 export default function Project({
   title,

@@ -16,3 +16,11 @@
   height: 30px;
   margin-left: -15px;
 }
+
+.borderBlack {
+  @apply border border-black/10;
+}
+
+.btnScale {
+  @apply hover:scale-110 focus:scale-110 active:scale-105;
+}

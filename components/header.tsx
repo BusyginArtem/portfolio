@@ -1,10 +1,13 @@
 "use client";
 
+import Link from "next/link";
+
+import { motion } from "framer-motion";
+
+import clsx from "clsx";
+
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { links } from "@/lib/data";
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =

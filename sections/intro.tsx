@@ -1,13 +1,16 @@
 "use client";
 
-import { useSectionInView } from "@/lib/hooks";
-import profileImg from "@/public/profile-img.avif";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+
+import Image from "next/image";
+import Link from "next/link";
+
+import { motion } from "framer-motion";
+
+import { useSectionInView } from "@/lib/hooks";
+import profileImg from "@/public/profile-img.avif";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -77,7 +80,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
+          className="btnScale group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:bg-gray-950"
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-0.5" />
@@ -86,7 +89,7 @@ export default function Intro() {
         <a
           href="/CV.pdf"
           download
-          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
+          className="borderBlack btnScale group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition"
         >
           Download CV{" "}
           <HiDownload className="opacity-60 transition group-hover:translate-x-0.5" />
@@ -95,7 +98,7 @@ export default function Intro() {
         <a
           href="https://www.linkedin.com/in/artem-busyhin-developer"
           target="_blank"
-          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]" rel="noreferrer"
         >
           <BsLinkedin />
         </a>
@@ -103,7 +106,7 @@ export default function Intro() {
         <a
           href="https://github.com/BusyginArtem?tab=repositories"
           target="_blank"
-          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]" rel="noreferrer"
         >
           <FaGithubSquare />
         </a>

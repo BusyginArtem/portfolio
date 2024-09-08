@@ -1,13 +1,15 @@
 "use client";
 
-import { SectionHeading } from "@/components/section-heading";
-import { experiencesData } from "@/lib/data";
-import { useSectionInView } from "@/lib/hooks";
 import React, { useEffect, useRef } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+
+import { SectionHeading } from "@/components/section-heading";
+import { experiencesData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
+
 import "react-vertical-timeline-component/style.min.css";
 
 export default function Experience() {
@@ -27,7 +29,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="mb-20 max-w-[53rem] scroll-mt-28 sm:mb-0"
+      className="mb-20 max-w-[53rem] scroll-mt-28"
     >
       <SectionHeading>{"My experience" as const}</SectionHeading>
 

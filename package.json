@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:eslint": "eslint  --fix"
   },
   "dependencies": {
     "@types/node": "22.3.0",
@@ -29,7 +30,10 @@
     "@eslint/js": "^9.9.0",
     "@types/react-vertical-timeline-component": "^3.3.6",
     "eslint": "^9.9.0",
+    "eslint-config-next": "14.2.8",
     "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
