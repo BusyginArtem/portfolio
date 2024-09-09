@@ -9,11 +9,14 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
+import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
 import profileImg from "@/public/profile-img.avif";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -81,6 +84,10 @@ export default function Intro() {
         <Link
           href="#contact"
           className="btnScale group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:bg-gray-950"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-0.5" />
@@ -98,7 +105,8 @@ export default function Intro() {
         <a
           href="https://www.linkedin.com/in/artem-busyhin-developer"
           target="_blank"
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]" rel="noreferrer"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]"
+          rel="noreferrer"
         >
           <BsLinkedin />
         </a>
@@ -106,7 +114,8 @@ export default function Intro() {
         <a
           href="https://github.com/BusyginArtem?tab=repositories"
           target="_blank"
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]" rel="noreferrer"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.2rem] text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-[1.15]"
+          rel="noreferrer"
         >
           <FaGithubSquare />
         </a>

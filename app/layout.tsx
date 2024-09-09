@@ -1,3 +1,5 @@
+import { Toaster } from "react-hot-toast";
+
 import { Inter } from "next/font/google";
 
 import Header from "@/components/header";
@@ -29,6 +31,8 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+
+          <Toaster position="top-right" />
         </ActiveSectionContextProvider>
       </body>
     </html>
